@@ -1,0 +1,17 @@
+<div class="parent">
+  <div class="parent__card">
+    <div class="small__card">
+      {{ data }}
+    </div>
+    <div class="button__group">
+      <button (click)="previous()" [disabled]="disableHere1">previous</button>
+      <button
+        (click)="forward(index)"
+        *ngFor="let a of [1, 2, 3, 4]; index as index"
+      >
+        {{ a }}
+      </button>
+      <button (click)="next()" [disabled]="disableHere">next</button>
+    </div>
+  </div>
+</div>
